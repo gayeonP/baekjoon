@@ -1,0 +1,2 @@
+D:\problem_solving\BOJ\x64\Debug\BOJ.exe
+D:\problem_solving\BOJ\x64\Debug\BOJ.pdb
