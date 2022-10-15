@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 using namespace std;
 
 int main() {
 
+#if 0
     vector<vector<int>> v {
             {1,4},
             {3,4},
@@ -28,6 +30,9 @@ int main() {
     for (auto v: ans) {
         cout << v << ", ";
     }
+#endif
+
+//    cout << pow(int(sqrt(3)), 2);
 
     return 0;
 }

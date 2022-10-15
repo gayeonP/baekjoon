@@ -150,8 +150,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/gayeon/study/programmers/cmake-build-debug",
-		"source" : "/Users/gayeon/study/programmers"
+		"build" : "/Users/gayeon/algorithm/programmers/cmake-build-debug",
+		"source" : "/Users/gayeon/algorithm/programmers"
 	},
 	"version" : 
 	{

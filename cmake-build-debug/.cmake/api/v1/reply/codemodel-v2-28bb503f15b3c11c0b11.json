@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "programmers::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-programmers-Debug-0709d3516633c66d92e9.json",
+					"jsonFile" : "target-programmers-Debug-a106bfeb92f12b68259c.json",
 					"name" : "programmers",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/gayeon/study/programmers/cmake-build-debug",
-		"source" : "/Users/gayeon/study/programmers"
+		"build" : "/Users/gayeon/algorithm/programmers/cmake-build-debug",
+		"source" : "/Users/gayeon/algorithm/programmers"
 	},
 	"version" : 
 	{

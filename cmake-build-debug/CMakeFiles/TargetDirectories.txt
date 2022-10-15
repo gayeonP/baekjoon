@@ -1,3 +1,3 @@
-/Users/gayeon/study/programmers/cmake-build-debug/CMakeFiles/programmers.dir
-/Users/gayeon/study/programmers/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/gayeon/study/programmers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/gayeon/algorithm/programmers/cmake-build-debug/CMakeFiles/programmers.dir
+/Users/gayeon/algorithm/programmers/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/gayeon/algorithm/programmers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
