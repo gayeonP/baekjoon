@@ -1,3 +1,4 @@
+
 #if 0
 #include <string>
 #include <vector>
@@ -94,18 +95,123 @@ vector<int> solution(long long n) {
 }
 #endif
 
-#if 1
+#if 0
 #include <string>
-#include <iostream>
+#include <vector>
+
 using namespace std;
 
-bool solution(string s)
-{
-    bool answer = true;
+string dec_to_binary (int n, int a) {
+    string res = "";
+    for (int i = n - 1; i >= 0; i--) {
+        res += to_string((a >> i) & 1);
+    }
+    return res;
+}
 
-    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    cout << "Hello Cpp" << endl;
-
+vector<string> solution(int n, vector<int> arr1, vector<int> arr2) {
+    vector<string> answer;
+    string ans = "", bit_arr1 = "", bit_arr2 = "";
+    for (int i = 0; i < n; i++) {
+        bit_arr1 = dec_to_binary(n, arr1[i]);
+        bit_arr2 = dec_to_binary(n, arr2[i]);
+        for (int j = 0; j < n; j++) {
+            if (bit_arr1[j] == '1' || bit_arr2[j] == '1') ans += "#";
+            else ans += " ";
+        }
+        answer.push_back(ans);
+        ans = "";
+    }
     return answer;
 }
 #endif
+
+#if 0
+#include <string>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+int solution(string s) {
+    int answer = 0;
+    map<string, int> dic;
+    dic["zero"] = 0;
+    dic["one"] = 1;
+    dic["two"] = 2;
+    dic["three"] = 3;
+    dic["four"] = 4;
+    dic["five"] = 5;
+    dic["six"] = 6;
+    dic["seven"] = 7;
+    dic["eight"] = 8;
+    dic["nine"] = 9;
+
+    size_t pos = 0;
+    for (auto iter = dic.begin(); iter != dic.end(); iter++) {
+        while ((pos = s.find(iter->first)) != string::npos) {
+            s.replace(pos, iter->first.size(), to_string(iter->second));
+        }
+    }
+    answer = stoi(s);
+    return answer;
+}
+#endif
+
+#if 1
+#include "level1.h"
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+
+using namespace std;
+
+vector<int> solution(int N, vector<int> stages) {
+    vector<int> answer;
+    map<int, double> temp;
+    int not_clear = 0, reach_stage = 0;
+    for (int i = 1; i <= N; i++) {
+        for (int j = 0; j < stages.size(); j++) {
+            if (stages[j] > i) reach_stage++;
+            else if (stages[j] == i) {
+                not_clear++;
+                reach_stage++;
+            }
+        }
+        double failure_rate = (double)not_clear / (double)reach_stage;
+        temp.insert(pair<int, double> (i, failure_rate));
+        not_clear = 0; reach_stage = 0;
+    }
+    vector<pair<int, double>> v_tem(temp.begin(), temp.end());
+    sort(v_tem.begin(), v_tem.end(), [](pair<int, double> a, pair<int, double> b) {
+        return a.second > b.second;
+    });
+    for (pair<int, double> it : v_tem) {
+        answer.push_back(it.first);
+    }
+    return answer;
+}
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
